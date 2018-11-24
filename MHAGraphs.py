@@ -83,7 +83,7 @@ if __name__=='__main__':
     e=[[0,1],[0,2],[1,3],[2,4],[6,1],[7,1],[2,5],[5,6],[6,9],[6,8],[7,8]]
     graph=MHASimpleGraph(e,v)
     m=graph.matrix()
-    graph.bfs(3)
+    graph.bfs(5)
     #print(graph.seen_list)
     path=graph.shortestPath(3,9)
     print(path)

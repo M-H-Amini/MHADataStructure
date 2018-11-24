@@ -24,11 +24,14 @@ class MHAHeap:
         return 2*i+2
     
     def display(self):
-        node_list=[Node(self.array[i]) for i in range(self.heap_size)]
-        for i in range(1,self.heap_size):
-            node_list[i].parent=node_list[int((i+1)/2)-1]  ##  indexes matched for python being 0-index
-        heap_tree=RenderTree(node_list[0])
-        print(heap_tree)
+        if self.heap_size>0:
+            node_list=[Node(self.array[i]) for i in range(self.heap_size)]
+            for i in range(1,self.heap_size):
+                node_list[i].parent=node_list[int((i+1)/2)-1]  ##  indexes matched for python being 0-index
+            heap_tree=RenderTree(node_list[0])
+            print(heap_tree)
+        else:
+            print('Empty! Nothing to display!!!')
 if __name__=='__main__':
     h=[7*i for i in range(1,5)]        
     h=Heap(h)
